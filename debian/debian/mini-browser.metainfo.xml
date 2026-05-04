@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>mini-browser</id>
+  <name>MiniBrowser</name>
+  <summary>A small but full-featured web browser built with PyQt6 + QtWebEngine</summary>
+  <developer id="github.com">
+    <name>LiangXiangan</name>
+  </developer>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <description>
+    <p>
+      MiniBrowser is a lightweight desktop web browser that supports tabbed
+      browsing, bookmarks, history, download management, proxy configuration,
+      and developer tools. It uses the QtWebEngine (Chromium) rendering engine
+      for modern web compatibility.
+    </p>
+    <ul>
+      <li>Multi-tab browsing with drag-and-drop tab reordering</li>
+      <li>Bookmarks and SQLite-backed history with search</li>
+      <li>Download manager with progress tracking</li>
+      <li>Proxy support (HTTP / SOCKS5)</li>
+      <li>Dark theme</li>
+      <li>Developer tools (F12)</li>
+      <li>Multi-language support (gettext-based i18n)</li>
+      <li>Configurable search engine (Google, Bing, DuckDuckGo, Baidu)</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/LiangXiangan/mini-browser</url>
+  <launchable type="desktop-id">mini-browser.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>MiniBrowser main window</caption>
+    </screenshot>
+  </screenshots>
+  <categories>
+    <category>Network</category>
+  </categories>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </recommends>
+  <provides>
+    <id>mini-browser.desktop</id>
+  </provides>
+</component>

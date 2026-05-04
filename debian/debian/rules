@@ -1,0 +1,58 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	# Nothing to clean — source-only package
+
+override_dh_auto_configure:
+	# No configure step needed
+
+override_dh_auto_build:
+	# No build step needed — pure Python script
+
+override_dh_auto_test:
+	# Verify Python syntax
+	python3 -c "import py_compile; py_compile.compile('main.py', doraise=True)"
+
+override_dh_auto_install:
+	# Install main script
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/mini-browser
+	cp main.py $(CURDIR)/debian/mini-browser/usr/share/mini-browser/
+
+	# Install locale files
+	cp -r locale $(CURDIR)/debian/mini-browser/usr/share/mini-browser/locale
+
+	# Install tools
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/mini-browser/tools
+	cp tools/update-translations.py $(CURDIR)/debian/mini-browser/usr/share/mini-browser/tools/
+
+	# Install startup wrapper
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/bin
+	cp debian/mini-browser.wrapper $(CURDIR)/debian/mini-browser/usr/bin/mini-browser
+	chmod 755 $(CURDIR)/debian/mini-browser/usr/bin/mini-browser
+
+	# Install desktop entry
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/applications
+	cp debian/mini-browser.desktop $(CURDIR)/debian/mini-browser/usr/share/applications/
+
+	# Install AppStream metadata
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/metainfo
+	cp debian/mini-browser.metainfo.xml $(CURDIR)/debian/mini-browser/usr/share/metainfo/
+
+	# Install man page
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/man/man1
+	cp debian/mini-browser.1 $(CURDIR)/debian/mini-browser/usr/share/man/man1/
+	gzip -9 $(CURDIR)/debian/mini-browser/usr/share/man/man1/mini-browser.1
+
+	# Install documentation
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/doc/mini-browser
+	cp README.md $(CURDIR)/debian/mini-browser/usr/share/doc/mini-browser/
+
+	# Install icons
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/icons/hicolor/scalable/apps
+	cp usr/share/icons/hicolor/scalable/apps/mini-browser.svg $(CURDIR)/debian/mini-browser/usr/share/icons/hicolor/scalable/apps/
+	mkdir -p $(CURDIR)/debian/mini-browser/usr/share/pixmaps
+	cp usr/share/pixmaps/mini-browser.png $(CURDIR)/debian/mini-browser/usr/share/pixmaps/

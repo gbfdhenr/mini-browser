@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Large generated files
+his.html
+
+# Debian build artifacts
+*.deb
+*.buildinfo
+*.changes
+*.ddeb
+debian/debian/mini-browser/
+debian/debian/files
+debian/debian/*.substvars
+debian/debian/*.log
+debian/debian/.debhelper/
+debian/debian/debhelper-build-stamp
+
+# OS
+.DS_Store
+Thumbs.db

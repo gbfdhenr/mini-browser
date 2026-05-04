@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=MiniBrowser
+Comment=A small but full-featured web browser built with PyQt6 + QtWebEngine
+Comment[zh_CN]=基于 PyQt6 + QtWebEngine 的轻量级网页浏览器
+Exec=mini-browser %u
+Icon=mini-browser
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+StartupWMClass=MiniBrowser

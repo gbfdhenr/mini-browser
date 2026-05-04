@@ -1,0 +1,98 @@
+.\" MiniBrowser - user manual
+.\"
+.TH MINI-BROWSER 1 "2026-05-04" "1.0.0" "MiniBrowser User Manual"
+.SH NAME
+mini-browser \- A small but full-featured web browser built with PyQt6 + QtWebEngine
+.SH SYNOPSIS
+.B mini-browser
+[\fI\,URL\/\fR]
+.SH DESCRIPTION
+MiniBrowser is a lightweight desktop web browser that supports tabbed browsing,
+bookmarks, history, download management, proxy configuration, and developer
+tools. It uses the QtWebEngine (Chromium) rendering engine for modern web
+compatibility.
+.SH OPTIONS
+.TP
+.BI URL
+Optional URL to open on startup. If omitted, the default homepage is loaded.
+.SH FEATURES
+.TP
+.B Multi-tab browsing
+Open multiple tabs with drag-and-drop reordering.
+.TP
+.B Bookmarks
+Save and organize your favourite websites.
+.TP
+.B History
+SQLite-backed browsing history with full-text search.
+.TP
+.B Download manager
+Track download progress with an in-app manager.
+.TP
+.B Proxy support
+Configure HTTP or SOCKS5 proxy through the settings dialog.
+.TP
+.B Search engines
+Choose between Google, Bing, DuckDuckGo, and Baidu.
+.TP
+.B Dark theme
+Built-in dark colour scheme for comfortable browsing.
+.TP
+.B Developer tools
+Open Chromium DevTools with F12.
+.TP
+.B i18n
+Multi-language support via gettext. Set the LANG environment variable to
+switch languages (e.g., LANG=zh_CN.UTF-8 mini-browser).
+.SH KEYBOARD SHORTCUTS
+.TP
+.B Ctrl+T
+Open a new tab
+.TP
+.B Ctrl+N
+Open a new window
+.TP
+.B Ctrl+W
+Close the current tab
+.TP
+.B Ctrl+S
+Save the current page as HTML
+.TP
+.B Ctrl+P
+Print the current page to PDF
+.TP
+.B Ctrl+H
+Show browsing history
+.TP
+.B Ctrl+B
+Manage bookmarks
+.TP
+.B Ctrl+D
+Add the current page to bookmarks
+.TP
+.B Ctrl+J
+Open download manager
+.TP
+.B Ctrl+,
+Open settings
+.TP
+.B F12
+Toggle developer tools
+.SH FILES
+.TP
+.I /usr/share/mini-browser/main.py
+The main application script.
+.TP
+.I ~/.local/share/MiniBrowser/history.db
+SQLite database storing browsing history.
+.TP
+.I ~/.local/share/MiniBrowser/bookmarks.json
+JSON file storing bookmarks.
+.SH ENVIRONMENT
+.TP
+.B LANG
+Language code for i18n (e.g., zh_CN.UTF-8 for Chinese, de_DE.UTF-8 for German).
+.SH BUGS
+Report bugs to: https://github.com/LiangXiangan/mini-browser/issues
+.SH AUTHOR
+LiangXiangan

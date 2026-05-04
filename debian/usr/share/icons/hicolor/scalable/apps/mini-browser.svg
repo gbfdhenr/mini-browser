@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b5797"/>
+      <stop offset="100%" stop-color="#1a3a6a"/>
+    </linearGradient>
+  </defs>
+  <!-- Browser window frame -->
+  <rect x="8" y="20" width="112" height="96" rx="8" ry="8" fill="url(#bg)" stroke="#1a3a6a" stroke-width="2"/>
+  <!-- Title bar -->
+  <rect x="8" y="20" width="112" height="20" rx="8" ry="8" fill="#1e4d8c"/>
+  <rect x="8" y="32" width="112" height="8" fill="#1e4d8c"/>
+  <!-- Window buttons -->
+  <circle cx="24" cy="30" r="4" fill="#ff5f56"/>
+  <circle cx="38" cy="30" r="4" fill="#ffbd2e"/>
+  <circle cx="52" cy="30" r="4" fill="#27c93f"/>
+  <!-- Address bar -->
+  <rect x="66" y="26" width="44" height="8" rx="4" fill="#2a2a2a" opacity="0.5"/>
+  <!-- Globe icon -->
+  <circle cx="64" cy="72" r="24" fill="none" stroke="#8ab4f8" stroke-width="3"/>
+  <ellipse cx="64" cy="72" rx="20" ry="10" fill="none" stroke="#8ab4f8" stroke-width="2"/>
+  <line x1="40" y1="72" x2="88" y2="72" stroke="#8ab4f8" stroke-width="2"/>
+  <line x1="64" y1="48" x2="64" y2="96" stroke="#8ab4f8" stroke-width="2"/>
+  <!-- Compass arrow -->
+  <polygon points="64,56 70,70 64,68 58,70" fill="#8ab4f8"/>
+</svg>

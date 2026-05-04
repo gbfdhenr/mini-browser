@@ -1,0 +1,13 @@
+mini-browser (1.0.0-1) unstable; urgency=medium
+
+  * Initial release.
+  * Tabbed browsing with navigation controls
+  * Bookmark and history management
+  * Download manager with progress tracking
+  * Proxy configuration (HTTP / SOCKS5)
+  * Multi-search-engine support
+  * Dark theme
+  * Developer tools (F12)
+  * i18n support (gettext-based)
+
+ -- LiangXiangan <gbfdhenr@163.com>  Sun, 04 May 2026 20:00:00 +0800
