@@ -1,7 +1,7 @@
 # MiniBrowser
 
 A small but full-featured web browser built with **PyQt6 + QtWebEngine**. Lightweight, themable, and developer-friendly.
-
+[（中文文档）](READE_zh.md)
 ---
 
 ## ✨ Features
