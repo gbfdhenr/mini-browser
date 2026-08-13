@@ -157,4 +157,4 @@ dpkg-buildpackage -us -uc -b
 
 ## 📄 License
 
-MIT © LiangXiangan
+AGPL-3.0-or-later © LiangXiangan
