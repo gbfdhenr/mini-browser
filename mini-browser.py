@@ -704,6 +704,7 @@ class MainBrowser(QMainWindow):
         self.bookmark_manager = BookmarkManager(BOOKMARKS_FILE)
 
         self.default_profile = QWebEngineProfile("MiniBrowserProfile", self)
+        self.default_profile.setHttpUserAgent(f"mini-browser/{APP_VERSION}")
         self.default_profile.setPersistentStoragePath(COOKIE_DIR)
         self.default_profile.setCachePath(CACHE_DIR)
         self.default_profile.setHttpCacheType(QWebEngineProfile.HttpCacheType.DiskHttpCache)
