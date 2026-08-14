@@ -2,7 +2,7 @@ Source: mini-browser
 Section: net
 Priority: optional
 Maintainer: LiangXiangan <gbfdhenr@163.com>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13), build-essential
 Standards-Version: 4.6.2
 Homepage: https://github.com/LiangXiangan/mini-browser
 Rules-Requires-Root: no
