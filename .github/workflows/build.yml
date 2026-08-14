@@ -25,7 +25,7 @@ jobs:
       - name: Build .deb
         working-directory: ./debian
         run: |
-          dpkg-buildpackage -us -uc -b
+          dpkg-buildpackage -us -uc -b -d
 
       - name: Verify .deb package
         run: |
@@ -83,13 +83,13 @@ jobs:
         run: |
           $version = "${{ github.ref_name }}".TrimStart('v')
           if (-not $version) { $version = "dev-$(date -Format 'yyyyMMdd')" }
-          Rename-Item dist/mini-browser.exe "mini-browser-win64-$version.exe"
+          Rename-Item -Path "dist/mini-browser.exe" -Destination "dist/mini-browser-win64-$version.exe" -Force
 
       - name: Upload Windows executable
         uses: actions/upload-artifact@v4
         with:
           name: mini-browser-windows
-          path: mini-browser-win64-*.exe
+          path: dist/mini-browser-win64-*.exe
           retention-days: 7
 
   release:
