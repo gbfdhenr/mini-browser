@@ -28,14 +28,16 @@ jobs:
           dpkg-buildpackage -us -uc -b -d
 
       - name: Verify .deb package
+        working-directory: .
         run: |
-          dpkg -I ../mini-browser_*_all.deb
-          dpkg -c ../mini-browser_*_all.deb
+          dpkg -I mini-browser_*_all.deb
+          dpkg -c mini-browser_*_all.deb
 
       - name: Find .deb artifact
         id: deb
+        working-directory: .
         run: |
-          FILE=$(ls ../mini-browser_*_all.deb | head -1)
+          FILE=$(ls mini-browser_*_all.deb | head -1)
           echo "file=$FILE" >> $GITHUB_OUTPUT
           echo "name=$(basename $FILE)" >> $GITHUB_OUTPUT
 
@@ -83,7 +85,7 @@ jobs:
         run: |
           $version = "${{ github.ref_name }}".TrimStart('v')
           if (-not $version) { $version = "dev-$(date -Format 'yyyyMMdd')" }
-          Rename-Item -Path "dist/mini-browser.exe" -Destination "dist/mini-browser-win64-$version.exe" -Force
+          Rename-Item -Path "dist/mini-browser.exe" -NewName "mini-browser-win64-$version.exe" -Force
 
       - name: Upload Windows executable
         uses: actions/upload-artifact@v4
